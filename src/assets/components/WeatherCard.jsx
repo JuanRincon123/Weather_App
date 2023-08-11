@@ -21,11 +21,11 @@ const WeatherCard = ({ weather, temp }) => {
       </header>
       <section>
         <div >
-          <img className='img' src={weather && `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="img" />
+          <img className='weather__img' src={weather && `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="img" />
         </div>
         <div>
           <h3>"{weather?.weather[0].description}"</h3>
-          <ul>
+          <ul className='weather__list'>
             <li><span>Wind Speed: </span>{weather?.wind.speed} m/s</li>
             <li><span>Clouds: </span>{weather?.clouds.all} %</li>
             <li><span>Pressure: </span>{weather?.main.pressure} hPa</li>
@@ -41,6 +41,5 @@ const WeatherCard = ({ weather, temp }) => {
 }
 
 
-// 00: 36:08
 
 export default WeatherCard
